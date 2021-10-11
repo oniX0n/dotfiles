@@ -1,3 +1,6 @@
+/* st/config.def.h 
+ * Config file for st terminal emulator */
+
 /* See LICENSE file for copyright and license details. */
 
 /*

@@ -9,5 +9,5 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 # Start X gui with dwm
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	  #exec startx &> /dev/null
+	  exec startx $HOME/.config/xinit/xinitrc &> /dev/null
 fi

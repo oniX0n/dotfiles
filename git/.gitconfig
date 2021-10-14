@@ -1,0 +1,11 @@
+# ~/.gitconfig
+# Global config file for git
+
+[user]
+	email = theopaul2001@gmx.de
+	name = Theo Müller
+[core]
+	editor = vim
+[alias]
+	mlg = log --all --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(reset)%s%C(reset) - %C(blue)%an%C(reset)'
+ 

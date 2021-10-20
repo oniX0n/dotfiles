@@ -1,5 +1,6 @@
 -- ~/.config/awesome/rc.lua
 -- Configuration script file for awesome
+-- vim:fileencoding=utf-8:foldmethod=marker
 
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
@@ -21,7 +22,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- {{{ Error handling
+-- Error Handling {{{ 
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then

@@ -1,0 +1,9 @@
+// ~/.config/nvim/coc-settings.json
+// Config json file for coc.nvim
+
+{
+	//"suggest.maxCompleteItemCount": 10,
+	"diagnostic.refreshOnInsertMode": true,
+	"diagnostic.errorSign": "✝"
+}
+

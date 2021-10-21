@@ -9,6 +9,9 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'kevinoid/vim-jsonc'
+Plug 'josa42/vim-lightline-coc'
 
 call plug#end() 
 
@@ -65,6 +68,9 @@ set showmatch
 " Use highlighting when doing a search.
 set hlsearch
 
+" Always show signcolumn
+set signcolumn=yes
+
 " Enable true colors
 set termguicolors
 
@@ -92,6 +98,14 @@ let g:lightline = {
       \ }
 
 " }}}
+
+" }}}
+
+" MAPPINGS --------------------------------------------------------------- {{{
+
+" }}}
+
+" COC.NVIM --------------------------------------------------------------- {{{
 
 " }}}
 

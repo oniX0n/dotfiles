@@ -36,6 +36,5 @@ fi
 # Remap escape to caps lock key
 setxkbmap -option caps:escape
 
-
 # Start dwm window manager
 exec awesome

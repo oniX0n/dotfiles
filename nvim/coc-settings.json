@@ -4,6 +4,7 @@
 {
 	//"suggest.maxCompleteItemCount": 10,
 	"diagnostic.refreshOnInsertMode": true,
-	"diagnostic.errorSign": "✝"
+	"diagnostic.errorSign": "❌",
+	"diagnostic.warningSign": "⚠"
 }
 

@@ -36,5 +36,8 @@ fi
 # Remap escape to caps lock key
 setxkbmap -option caps:escape
 
+# Start picom compositor
+picom -b
+
 # Start awesome window manager
 exec awesome

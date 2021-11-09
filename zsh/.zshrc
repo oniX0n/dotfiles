@@ -27,7 +27,7 @@ eval "$(dircolors)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}  
 
 # Activate vim mode
-bindkey -v
+# bindkey -v
 
 # Key bindings setup from archwiki zsh
 # Get Keys
@@ -83,8 +83,8 @@ setopt auto_cd
 # Aliases
 # ls colors
 alias ls='ls --color=auto'
-alias ll='ls -l'
-alias al='ls -al'
+alias ll='ls -lh'
+alias al='ll -a'
 alias q='exit'
 
 # Syntax highlighting setup

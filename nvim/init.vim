@@ -82,6 +82,9 @@ colorscheme gruvbox
 " Turn on dark mode
 set background=dark
 
+" In terminal mode disable signcolumn and line numbers
+" autocmd TermOpen * setlocal nonumber signcolumn=no
+
 " LIGHTLINE ---------------------- {{{
 
 " Setup lightline
@@ -119,7 +122,11 @@ let g:lightline#coc#indicator_ok = ' OK '
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
+" Set leader key to ö
 let mapleader="ö"
+
+" Set enter digraph to <C-y>
+inoremap <C-y> <C-k>
 
 " }}}
 
@@ -132,12 +139,11 @@ set updatetime=100
 " Always show signcolumn
 set signcolumn=yes
 
-" Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Use <C-j> to go down in completion menu
+inoremap <silent><expr> <C-j> pumvisible() ? "\<C-n>" : "\<Enter>"
+
+" Use <C-k> to go up in completion menu
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -151,8 +157,8 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-" Make <a-TAB> confirm completion selection or autoselect the first entry 
-inoremap <silent><expr> <a-TAB> coc#_select_confirm()
+" Make <C-l> confirm completion selection or autoselect the first entry 
+inoremap <silent><expr> <C-l> coc#_select_confirm()
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -181,7 +187,7 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Symbol renaming. TODO: Get to work
+" Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
@@ -240,6 +246,9 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+nnoremap <silent><nowait> <leader>d :<C-u>CocList diagnostics<cr>
+
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{

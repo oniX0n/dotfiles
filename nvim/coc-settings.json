@@ -2,9 +2,13 @@
 // Config json file for coc.nvim
 
 {
-	//"suggest.maxCompleteItemCount": 10,
+	"suggest.maxCompleteItemCount": 30,
+	
 	"diagnostic.refreshOnInsertMode": true,
 	"diagnostic.errorSign": "❌",
-	"diagnostic.warningSign": "⚠"
+	"diagnostic.warningSign": "⚠",
+
+	"list.indicator": ">",
+	"list.alignColumns": true
 }
 

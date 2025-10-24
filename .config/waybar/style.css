@@ -1,0 +1,75 @@
+/* waybar theme */
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: FiraCode;
+	font-size: 13px;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+tooltip {
+	border: 1px solid #282828;
+	border-radius: 26px;
+	background: #83a598;
+	text-shadow: none;
+}
+tooltip label {
+	color: #282828;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.niri-taskbar, #network, #pulseaudio, #backlight, #battery, #temperature, #cpu, #memory, #clock, #mpd, #window, #custom-wetter, #taskbar {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	color: #282828;
+	background: #8ec07c;
+}
+
+#window  {
+	background: #83a598;
+}
+
+#clock {
+	margin-right: 6px;
+	color: #ebdbb2;
+	background: #282a36;
+}
+
+.niri-taskbar {
+	padding-left: 0px;
+	background: none;
+}
+
+.niri-taskbar button:hover {
+	background: none;
+}
+
+.niri-taskbar button {
+	margin-right: 4px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+.niri-taskbar button.focused {
+  background: #d3869b;
+  border-radius: 26px;
+}

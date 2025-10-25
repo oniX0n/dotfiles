@@ -78,3 +78,9 @@
   (remove-hook 'dired-mode-hook 'dired-omit-mode)
 )
 (global-auto-revert-mode 1)
+
+(use-package! nyan-mode
+  :init
+  (nyan-mode)
+  (nyan-start-animation)
+)

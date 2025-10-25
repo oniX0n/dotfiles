@@ -55,3 +55,4 @@
 
 (package! kdl-mode)
 (package! rasi-mode)
+(package! nyan-mode)

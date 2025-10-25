@@ -1,11 +1,13 @@
+// -*- mode: jsonc -*-
+
 {
     "layer": "top", 
     "height": 30, 
     "spacing": 4,
     // Choose the order of the modules
     "modules-left": ["cffi/niri-taskbar"],
-    "modules-center": ["niri/window"],
-    "modules-right": ["image", "pulseaudio", "clock"],
+    "modules-center": ["niri/workspaces"],
+    "modules-right": ["pulseaudio/slider", "image", "pulseaudio", "clock"],
     
   	"cffi/niri-taskbar": {
     	"module_path": "/home/theo/code/niri-taskbar/target/release/libniri_taskbar.so",
@@ -13,7 +15,13 @@
   	},
   	"niri/window": {
     },
-
+    "niri/workspaces": {
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {

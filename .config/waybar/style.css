@@ -1,5 +1,7 @@
 /* waybar theme */
 
+/*GENERAL WAYBAR*/
+
 * {
 	border: none;
 	border-radius: 0;
@@ -18,12 +20,13 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
-
 tooltip {
 	border: 1px solid #282828;
-	border-radius: 26px;
-	background: #83a598;
+	border-radius: 10px;
+	/* background: #83a598; */
 	text-shadow: none;
+	background-color: alpha(#83a598, 0.999999999999);
+
 }
 tooltip label {
 	color: #282828;
@@ -33,7 +36,9 @@ tooltip label {
 	padding-right: 10px;
 }
 
-.niri-taskbar, #network, #pulseaudio, #backlight, #battery, #temperature, #cpu, #memory, #clock, #mpd, #window, #custom-wetter, #taskbar, #image {
+/*UNDERLAYING LAYOUT*/
+
+.niri-taskbar, #workspaces button, #pulseaudio-slider trough, #network, #pulseaudio, #backlight, #battery, #temperature, #cpu, #memory, #clock, #mpd, #window, #custom-wetter, #taskbar, #image {
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 16px;
@@ -45,6 +50,8 @@ tooltip label {
 	background: #8ec07c;
 }
 
+/*GENERAL MODULES*/
+
 #image {
 	background: #ebdbb2;
 	padding-left: 8px;
@@ -53,6 +60,10 @@ tooltip label {
 
 #window  {
 	background: #83a598;
+}
+
+#pulseaudio {
+	min-width:  45px;
 }
 
 window#waybar.empty #window {
@@ -64,6 +75,19 @@ window#waybar.empty #window {
 	color: #ebdbb2;
 	background: #282a36;
 }
+
+/*WORKSPACES*/
+
+#workspaces button {
+	background: #83a598;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+#workspaces button.active {
+	background: #d3869b;
+}
+
+/*TASKBAR*/
 
 .niri-taskbar {
 	padding-left: 0px;
@@ -83,4 +107,30 @@ window#waybar.empty #window {
 .niri-taskbar button.focused {
   background: #b16286;
   border-radius: 26px;
+}
+
+/* SLIDER */
+#pulseaudio-slider {
+    padding: 0;
+    margin: 0;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+	padding-right: 0px;
+	padding-left: 0px;
+	min-height: 10px;
+    min-width: 100px;
+    background: #282828;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 26px;
+    background: #8ec07c;
 }

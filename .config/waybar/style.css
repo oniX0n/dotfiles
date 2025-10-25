@@ -18,6 +18,7 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
+
 tooltip {
 	border: 1px solid #282828;
 	border-radius: 26px;
@@ -32,7 +33,7 @@ tooltip label {
 	padding-right: 10px;
 }
 
-.niri-taskbar, #network, #pulseaudio, #backlight, #battery, #temperature, #cpu, #memory, #clock, #mpd, #window, #custom-wetter, #taskbar {
+.niri-taskbar, #network, #pulseaudio, #backlight, #battery, #temperature, #cpu, #memory, #clock, #mpd, #window, #custom-wetter, #taskbar, #image {
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 16px;
@@ -44,8 +45,18 @@ tooltip label {
 	background: #8ec07c;
 }
 
+#image {
+	background: #ebdbb2;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
 #window  {
 	background: #83a598;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
 }
 
 #clock {
@@ -65,11 +76,11 @@ tooltip label {
 
 .niri-taskbar button {
 	margin-right: 4px;
-    padding-right: 1px;
-    padding-left: 1px;
+    padding-right: 3px;
+    padding-left: 3px;
 }
 
 .niri-taskbar button.focused {
-  background: #d3869b;
+  background: #b16286;
   border-radius: 26px;
 }

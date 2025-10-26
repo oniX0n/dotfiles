@@ -108,6 +108,10 @@ window#waybar.empty #window {
   background: #b16286;
   border-radius: 26px;
 }
+.niri-taskbar button.urgent {
+    background: #cc2412;
+    border-radius: 26px;
+}
 
 /* SLIDER */
 #pulseaudio-slider {

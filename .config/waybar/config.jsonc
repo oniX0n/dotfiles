@@ -29,7 +29,7 @@
         "path": "/home/theo/cat.png",
         "size": 28,
         "interval": 5,
-        "on-click": "kitty -e --hold 'kitten' 'icat' 'cat.png'"
+        "on-click": "kitty -o background_opacity=0.0 --class catcat -e bash /home/theo/.config/waybar/catcat.sh"
     },
 
     "tray": {
@@ -88,7 +88,7 @@
             "car": "",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "pavucontrol"
+        "on-click": "kitty --class volume_widget -e pulsemixer"
     },
 
     "custom/media": {

@@ -327,6 +327,32 @@ window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
 }
+
+//VOLUME WIDGET
+window-rule {
+    match app-id="^volume_widget$"
+    open-floating true
+    default-floating-position x=10 y=10 relative-to="top-right"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 400; }
+}
+
+window-rule {
+    match app-id="^catcat$"
+    open-floating true
+    default-floating-position x=10 y=10 relative-to="top-right"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 500; }
+    focus-ring {
+        off
+    }
+    shadow {
+        off
+    }
+    baba-is-float true
+}
+
+
 //STEAM
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#

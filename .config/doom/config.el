@@ -76,6 +76,12 @@
 ;; they are implemented.
 (after! dired
   (remove-hook 'dired-mode-hook 'dired-omit-mode)
+  (setq dired-omit-files
+    (rx (or (seq bol (? ".") "#")     ;; emacs autosave files
+        (seq bol "." (not (any "."))) ;; dot-files
+        (seq "~" eol)                 ;; backup-files
+        (seq bol "CVS" eol)           ;; CVS dirs
+        )))
 )
 (global-auto-revert-mode 1)
 

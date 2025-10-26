@@ -1,0 +1,57 @@
+/* waybar theme */
+
+/*GENERAL WAYBAR*/
+@import "mocha.css";
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: FiraCode;
+	font-size: 13px;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+    color: @text;
+}
+
+window#waybar {
+	background: @base;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+tooltip {
+    background: @base;
+    border: 1px solid @surface1 ;
+}
+tooltip label {
+    color: @text;
+}
+
+
+#clock {
+    font-size: 15px;
+}
+
+#workspaces button {
+    border-bottom: solid @surface1 1px;
+    min-height: 40px;
+    color: black;
+}
+#workspaces button:hover {
+    background: @surface0;
+}
+
+#workspaces button.active {
+    background: alpha(@maroon, 0.7);
+}
+#memory, #cpu, #network, #pulseaudio, #idle_inhibitor {
+    border-top: solid @surface1 1px;
+    min-height: 40px;
+}
+
+#memory:hover, #cpu:hover, #clock:hover, #network:hover, #pulseaudio:hover, #idle_inhibitor:hover{
+    background: @surface0;
+}

@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["cffi/niri-taskbar"],
     "modules-center": ["niri/workspaces"],
-    "modules-right": ["pulseaudio/slider", "image", "pulseaudio", "clock"],
+    "modules-right": ["pulseaudio/slider", "image", "pulseaudio", "cpu", "clock"],
 
 
     // Modules
@@ -44,7 +44,8 @@
 
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "interval": 4,
+        "on-click": "kitty -e htop"
     },
 
     "memory": {

@@ -66,6 +66,9 @@ tooltip label {
 	min-width:  45px;
 }
 
+#cpu {
+	min-width:  45px;
+}
 window#waybar.empty #window {
     background-color: transparent;
 }

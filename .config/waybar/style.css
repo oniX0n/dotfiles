@@ -93,22 +93,30 @@ window#waybar.empty #window {
 
 /*TASKBAR*/
 
+.taskbar-button-workspace {
+    background: #83a598;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 26px;
+    margin-left: 12px;
+    margin-right: 4px;
+}
+.taskbar-button-workspace.focused {
+    background: #d3869b;
+}
+
 .niri-taskbar {
-	padding-left: 0px;
 	background: none;
+    padding-left: 0;
 }
 
-.niri-taskbar button:hover {
-	background: none;
-}
-
-.niri-taskbar button {
-	margin-right: 4px;
+.taskbar-button-window {
+    margin-right: 4px;
     padding-right: 3px;
     padding-left: 3px;
 }
 
-.niri-taskbar button.focused {
+.taskbar-button-window.focused {
   background: #b16286;
   border-radius: 26px;
 }

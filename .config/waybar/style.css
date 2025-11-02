@@ -99,7 +99,7 @@ window#waybar.empty #window {
     padding-right: 8px;
     border-radius: 26px;
     margin-left: 12px;
-    margin-right: 4px;
+    margin-right: 6px;
 }
 .taskbar-button-workspace.focused {
     background: #d3869b;
@@ -117,8 +117,8 @@ window#waybar.empty #window {
 }
 
 .taskbar-button-window.focused {
-  background: #b16286;
-  border-radius: 26px;
+    background: #d3869b;
+    border-radius: 26px;
 }
 .niri-taskbar button.urgent {
     background: #cc2412;

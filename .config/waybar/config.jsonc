@@ -14,7 +14,7 @@
     // Modules
     "cffi/niri-taskbar": {
         "module_path": "/home/theo/code/niri-taskbar/target/release/libniri_taskbar.so",
-        "display_mode": "by_workspace",
+        "display_mode": "workspace_buttons",
     },
     "niri/window": {
     },

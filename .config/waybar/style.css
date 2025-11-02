@@ -94,9 +94,14 @@ window#waybar.empty #window {
 /*TASKBAR*/
 
 .taskbar-button-workspace {
+    margin-right: 8px;
+    margin-left: 8px;
+    font-size: 15px;
+}
+.taskbar-container-workspace {
     background: #83a598;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 4px;
+    padding-right: 10px;
     border-radius: 26px;
     margin-left: 12px;
     margin-right: 4px;
@@ -111,14 +116,13 @@ window#waybar.empty #window {
 }
 
 .taskbar-button-window {
-    margin-right: 4px;
     padding-right: 3px;
     padding-left: 3px;
+    border-left: 1px solid green;
 }
 
 .taskbar-button-window.focused {
   background: #b16286;
-  border-radius: 26px;
 }
 .niri-taskbar button.urgent {
     background: #cc2412;

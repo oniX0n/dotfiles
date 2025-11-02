@@ -90,3 +90,29 @@
   (nyan-mode)
   (nyan-start-animation)
 )
+
+(after! lsp-mode
+  (setq
+   lsp-signature-render-documentation nil
+   lsp-headerline-breadcrumb-enable t
+   lsp-headerline-breadcrumb-icons-enable nil
+   lsp-modeline-code-actions-enable nil
+   lsp-modeline-diagnostics-enable nil
+   lsp-inlay-hint-enable t
+   lsp-headerline-breadcrumb-enable-diagnostics nil
+   )
+   (lsp-inlay-hints-mode)
+)
+
+(setq undo-limit 16000000)
+(setq undo-strong-limit 16000000)
+(setq evil-want-fine-undo t)
+
+
+(defun buffer-diff ()
+  "Diff the current buffer against its saved file."
+  (interactive)
+  (diff-buffer-with-file (current-buffer)))
+(map! :leader
+      :desc "Diff buffer with file"
+      "b d" #'buffer-diff)

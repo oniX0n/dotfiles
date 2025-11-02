@@ -23,6 +23,8 @@ input {
 
         // Enable numlock on startup, omitting this setting disables it.
         numlock
+        repeat-rate 80
+        repeat-delay 500
     }
 
     // Next sections include libinput settings.
@@ -179,7 +181,7 @@ layout {
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#d3869b"
+        inactive-color "#83a598"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).

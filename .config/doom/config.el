@@ -74,6 +74,10 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+
+
 (after! dired
   (remove-hook 'dired-mode-hook 'dired-omit-mode)
   (setq dired-omit-files
@@ -83,6 +87,16 @@
         (seq bol "CVS" eol)           ;; CVS dirs
         )))
 )
+(after! dired-du
+  (setq dired-du-size-format t))
+
+(map! :after dired
+      :map dired-mode-map
+      :localleader
+      :desc "Toggle dired-du-mode"
+      "s" #'dired-du-mode)
+
+
 (global-auto-revert-mode 1)
 
 (use-package! nyan-mode
@@ -100,6 +114,7 @@
    lsp-modeline-diagnostics-enable nil
    lsp-inlay-hint-enable t
    lsp-headerline-breadcrumb-enable-diagnostics nil
+   lsp-rust-analyzer-cargo-watch-command "clippy"
    )
    (lsp-inlay-hints-mode)
 )

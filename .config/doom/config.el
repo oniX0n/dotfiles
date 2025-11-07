@@ -107,6 +107,7 @@
 
 (after! lsp-mode
   (setq
+   lsp-ui-sideline-diagnostic-max-lines 3
    lsp-signature-render-documentation nil
    lsp-headerline-breadcrumb-enable t
    lsp-headerline-breadcrumb-icons-enable nil
@@ -119,8 +120,11 @@
    (lsp-inlay-hints-mode)
 )
 
-(setq undo-limit 16000000)
-(setq undo-strong-limit 16000000)
+(after! undo-fu
+  (setq undo-limit (* 4 67108864)) ; 64mb.
+  (setq undo-strong-limit (* 4 100663296)) ; 96mb.
+  (setq undo-outer-limit (* 4 1006632960)) ; 960mb.
+  )
 (setq evil-want-fine-undo t)
 
 
@@ -152,3 +156,5 @@
 
 (advice-add 'magit-process-environment
             :filter-return #'my/magit-process-environment)
+
+

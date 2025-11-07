@@ -373,6 +373,10 @@ window-rule {
     default-window-height { fixed 600; }
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
+window-rule {
+    match app-id="steam" title="Steam Big Picture Mode"
+    open-fullscreen true
+}
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:

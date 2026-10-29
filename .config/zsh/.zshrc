@@ -86,13 +86,19 @@ setopt auto_cd
 
 # Aliases
 # ls colors
-alias ls='ls --color=auto'
-alias ll='ls -lh'
+alias ls='ls --color=auto -h'
+alias ll='ls -l'
 alias al='ll -a'
 alias q='exit'
 
 alias icat='kitten icat'
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh" #TODO: why here
+
+alias del='maid'
+alias rm='rm -iv'
+alias sudo='sudo ' #TODO: why?
+
+
 
 #dotfiles with bare git repo
 alias configit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -105,7 +111,7 @@ ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # Autosuggestion setup
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Theme setup
 #source $ZDOTDIR/themes/powerlevel10k/powerlevel10k.zsh-theme

@@ -84,25 +84,6 @@ promptinit
 # Change dir without cd
 setopt auto_cd
 
-# Aliases
-# ls colors
-alias ls='ls --color=auto -h'
-alias ll='ls -l'
-alias al='ll -a'
-alias q='exit'
-
-alias icat='kitten icat'
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh" #TODO: why here
-
-alias del='maid'
-alias rm='rm -iv'
-alias sudo='sudo ' #TODO: why?
-
-
-
-#dotfiles with bare git repo
-alias configit='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 # Syntax highlighting setup
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Disable underline of dirs
